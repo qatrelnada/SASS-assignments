@@ -1,0 +1,10 @@
+.parent { // class parent
+    & + .sibling { // class sibling which is an adjacent sibling of class parent
+      margin: auto { // margin property with auto value 
+        top: 10px; // margin-top property with 10px value
+      }
+      & ~ .last { // class last which is a general sibling to class sibling
+        padding: 10px; // padding property with 10px value
+      }
+    }
+}

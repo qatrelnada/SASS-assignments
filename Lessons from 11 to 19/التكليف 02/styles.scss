@@ -1,0 +1,8 @@
+$initial_width: 0;
+
+@for $i from 1 through 16 {
+    .col-#{$i} {
+        width: $initial_width + 6.25%;
+    }
+    $initial_width: $initial_width + 6.25%;
+}

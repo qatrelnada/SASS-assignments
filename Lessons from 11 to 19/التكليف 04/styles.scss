@@ -1,0 +1,43 @@
+$num: 2;
+$start: 100;
+
+@function double($size) {
+  @return $size * $num;
+}
+
+$initial_width: 0;
+
+@for $i from 1 through 5 {
+    .box-#{$i * 100} {
+        width: $initial_width + 100;
+        height: double($initial_width + 100);
+    }
+    $initial_width: $initial_width + 100
+}
+
+// Output
+
+// .box-100 {
+//   width: 100px;
+//   height: 200px;
+// }
+
+// .box-200 {
+//   width: 200px;
+//   height: 400px;
+// }
+
+// .box-400 {
+//   width: 400px;
+//   height: 800px;
+// }
+
+// .box-800 {
+//   width: 800px;
+//   height: 1600px;
+// }
+
+// .box-1600 {
+//   width: 1600px;
+//   height: 3200px;
+// }
